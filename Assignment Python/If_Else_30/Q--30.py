@@ -1,22 +1,18 @@
-age = int(input("Enter age: "))
-marks = float(input("Enter marks: "))
-income = float(input("Enter family income: "))
-attendance = float(input("Enter attendance percentage: "))
+student_age=int(input("Enter age : "))
+marks=float(input("Enter marks : "))
+family_income=float(input("enter income : "))
+attendence_per=float(input("enter attendece percentage : "))
 
-if 18 <= age <= 25 and marks >= 85 and income <= 300000 and attendance >= 75:
-    print("Scholarship Approved")
-
+if student_age>=18 and student_age<=25:
+    if marks>=85:
+        if attendence_per>=75:
+                if family_income<=300000:
+                    print("Scholarship Approved")
+                else:
+                    print("family income greater then 3LPA")
+        else:
+             print("attendence is less then 75 ")    
+    else:
+         print("Marks are below 85")
 else:
-    print("Scholarship Rejected")
-
-    if age < 18 or age > 25:
-        print("Reason: Age must be between 18 and 25")
-
-    if marks < 85:
-        print("Reason: Marks below 85")
-
-    if income > 300000:
-        print("Reason: Family income exceeds ₹300000")
-
-    if attendance < 75:
-        print("Reason: Attendance below 75%")
+     print("invalid age")
